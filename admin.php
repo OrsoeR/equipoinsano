@@ -36,63 +36,75 @@ if ($_SESSION["tipo"] !== "administrador") {
 
         body {
             margin: 0;
-            font-family: Arial, sans-serif;
-            background: #f4f6f9;
+            font-family: 'Segoe UI', Arial, sans-serif;
+            background: linear-gradient(180deg, #f4f6fb 0%, #eef1f8 100%);
             color: #222;
         }
 
         /* Barra superior */
 
         .navbar {
-            background: #1e1e2f;
+            background: linear-gradient(90deg, #1e1e2f 0%, #2a2a45 100%);
             color: white;
-            padding: 18px 30px;
+            padding: 20px 35px;
 
             display: flex;
             justify-content: space-between;
             align-items: center;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.15);
         }
 
         .navbar h1 {
             margin: 0;
             font-size: 24px;
+            letter-spacing: 0.5px;
         }
 
         .usuario {
             font-size: 14px;
+            display: flex;
+            align-items: center;
+            gap: 5px;
         }
 
         .logout {
             background: #d32f2f;
             color: white;
             text-decoration: none;
-            padding: 9px 15px;
-            border-radius: 6px;
+            padding: 9px 16px;
+            border-radius: 8px;
             margin-left: 15px;
+            font-size: 13px;
+            font-weight: 600;
+            transition: background 0.2s ease, transform 0.15s ease;
         }
 
         .logout:hover {
             background: #b71c1c;
+            transform: translateY(-1px);
         }
 
         /* Contenido */
 
         .container {
-            padding: 30px;
+            padding: 35px 30px 50px;
             max-width: 1200px;
             margin: auto;
         }
 
         .titulo {
-            margin-bottom: 25px;
+            margin-bottom: 30px;
         }
 
         .titulo h2 {
-            margin-bottom: 5px;
+            margin-bottom: 6px;
+            font-size: 26px;
+            color: #1e1e2f;
         }
 
         .titulo p {
-            color: #666;
+            color: #777;
+            font-size: 15px;
         }
 
         /* Tarjetas */
@@ -100,39 +112,55 @@ if ($_SESSION["tipo"] !== "administrador") {
         .cards {
             display: grid;
             grid-template-columns: repeat(3, 1fr);
-            gap: 20px;
-            margin-bottom: 30px;
+            gap: 22px;
+            margin-bottom: 35px;
         }
 
         .card {
             background: white;
-            padding: 25px;
-            border-radius: 12px;
-            box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+            padding: 26px;
+            border-radius: 16px;
+            box-shadow: 0 6px 18px rgba(0,0,0,0.06);
+            border: 1px solid #eef0f5;
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
+        }
+
+        .card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 10px 24px rgba(0,0,0,0.1);
         }
 
         .card h3 {
             margin-top: 0;
+            margin-bottom: 12px;
             color: #666;
-            font-size: 16px;
+            font-size: 15px;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.4px;
         }
 
         .numero {
-            font-size: 32px;
-            font-weight: bold;
+            font-size: 34px;
+            font-weight: 700;
+            color: #1e1e2f;
         }
 
         /* Gráfica */
 
         .grafica {
             background: white;
-            padding: 25px;
-            border-radius: 12px;
-            box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+            padding: 28px;
+            border-radius: 16px;
+            box-shadow: 0 6px 18px rgba(0,0,0,0.06);
+            border: 1px solid #eef0f5;
         }
 
         .grafica h2 {
             margin-top: 0;
+            margin-bottom: 20px;
+            font-size: 19px;
+            color: #1e1e2f;
         }
 
         .chart-container {
@@ -151,6 +179,7 @@ if ($_SESSION["tipo"] !== "administrador") {
             .navbar {
                 flex-direction: column;
                 gap: 15px;
+                align-items: flex-start;
             }
 
             .container {
@@ -292,7 +321,11 @@ if ($_SESSION["tipo"] !== "administrador") {
                         7,
                         9,
                         3
-                    ]
+                    ],
+
+                    backgroundColor: '#1e1e2f',
+
+                    borderRadius: 6
 
                 }]
 
